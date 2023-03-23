@@ -109,8 +109,9 @@
 
     @media (max-width: 450px) {
       height: 189.99vh;
-      left: 100%;
-      backdrop-filter: blur(20rem);
+      right: 0;
+      opacity: 0;
+      backdrop-filter: blur(2.6rem);
       padding: 0 0 0 2.5em;
     }
   }
@@ -219,8 +220,14 @@
 }
 
 @media (max-width: 450px) {
+
   .active.header__nav {
-    left: 32%;
+    opacity: 1;
+    transition: all .5s ease;
+
+    body {
+      overflow: hidden;
+    }
   }
 
   .active.header__burguer span:nth-child(1) {
