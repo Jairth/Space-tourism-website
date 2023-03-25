@@ -1,0 +1,171 @@
+@import "_mixins.scss";
+
+.home {
+  position: absolute;
+  top: 0;
+  background-image: url("../../../assets/shared/home/background-home-desktop.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    background-image: url("../../../assets/shared/home/background-home-tablet.jpg");
+  }
+
+  @include flexible(flex, row, nowrap, center, center);
+
+  &__wrapper {
+    @include flexible(flex, row, nowrap, center, center);
+    margin: 7.5em 0 0 0;
+
+    @media (max-width: 768px) {
+      flex-flow: column nowrap;
+      margin: 6em 0 0 0;
+    }
+
+    @media (max-width: 450px) {
+      margin: 0 0 0 0;
+      gap: 6em;
+    }
+
+    @media (max-height: 667px) {
+      margin: 15% 0 0 0;
+      gap: 2em;
+    }
+  }
+
+  &__space {
+    @include flexible(flex, column, nowrap, space-between, flex-start);
+    flex: 1;
+    gap: 1em;
+
+    @media (max-width: 768px) {
+      align-items: center;
+    }
+
+    @media (max-width: 450px) {
+      gap: 2em;
+    }
+  }
+
+  &__subtitle {
+    font-family: "Barlow Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.75em;
+    letter-spacing: 0.2953rem;
+    color: #ffffff;
+
+    @media (max-width: 768px) {
+      font-size: 1.25em;
+      letter-spacing: 0.2109rem;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 1em;
+      letter-spacing: 0.1688rem;
+    }
+  }
+
+  &__title {
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.375em;
+    color: #ffffff;
+
+    @media (max-width: 450px) {
+      font-size: 5em;
+    }
+  }
+
+  &__text {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125em;
+    line-height: 2rem;
+    text-align: left;
+    color: #d0d6f9;
+
+    @media (max-width: 768px) {
+      font-size: 1em;
+      line-height: 1.75rem;
+      text-align: center;
+      width: 61%;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 0.9375em;
+      line-height: 1.5625rem;
+      width: 93%;
+    }
+  }
+
+  &__explore {
+    @include flexible(flex, row, nowrap, flex-end, flex-end);
+    flex: 2;
+    margin: auto 0 0 0;
+
+    @media (max-width: 768px) {
+      margin: 10.25em 0 0 0;
+    }
+
+    @media (max-width: 450px) {
+      margin: 0;
+    }
+  }
+
+  &__circle {
+    position: relative;
+    @include flexible(flex, row, nowrap, center, center);
+    background-color: #ffff;
+    width: 17.125rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2em;
+    letter-spacing: 0.125em;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.5s ease;
+    }
+
+    &:hover::before {
+      opacity: 0.1;
+      z-index: 1;
+      transition: all 0.5s ease;
+    }
+
+    @media (max-width: 450px) {
+      width: 9.375rem;
+      font-size: 1.25em;
+      letter-spacing: 0.0781rem;
+
+      &::before {
+        width: 18.75rem;
+        height: 18.75rem;
+      }
+    }
+
+    @media (max-height: 667px) {
+      margin: 2em 0 0 0;
+    }
+  }
+}
