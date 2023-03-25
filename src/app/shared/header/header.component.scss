@@ -13,7 +13,6 @@
   }
 
   &__wrapper {
-    background-color: lightcoral;
     @include flexible(flex, row, nowrap, space-between, center);
   }
 
@@ -63,7 +62,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 42.38%;
+    // left: 42.38%;
+    right: -42.38%;
     height: 100%;
     width: 100%;
     background-color: hsla(0, 0%, 100%, 4%);
@@ -73,46 +73,50 @@
     @include flexible(flex, row, nowrap, flex-start, center);
 
     @media (max-width: 84.375rem) {
-      left: 36%;
+      right: -36%;
     }
 
     @media (max-width: 65rem) {
-      left: 28%;
+      right: -28%;
     }
 
     @media (max-width: 60.1875rem) {
       padding: 0 0 0 3em;
-      left: 20%;
+      right: -20%;
     }
 
     @media (max-width: 49.875rem) {
       padding: 0 0 0 2em;
-      left: 16%;
+      right: -16%;
     }
 
-    @media (max-width: 48rem) {
+    @media (max-width: 768px) {
       padding: 0 0 0 3em;
-      left: 43.2%;
+      right: 0%;
       width: 56.7%;
     }
 
     @media (max-width: 40.8125rem) {
-      left: 32%;
+      right: 0%;
       width: 68%;
     }
 
-    @media (max-width: 34.1875rem) {
-      left: 20%;
+    @media (max-width: 547px) {
+      right: -5%;
       width: 80%;
       padding: 0 0 0 1.5em;
     }
 
     @media (max-width: 450px) {
-      height: 189.99vh;
+      height: 189.8vh;
+      overflow: hidden;
+      width: 0;
       right: 0;
       opacity: 0;
+      pointer-events: none;
+      z-index: -1;
       backdrop-filter: blur(2.6rem);
-      padding: 0 0 0 2.5em;
+      transition: all 0.5s ease;
     }
   }
 
@@ -143,6 +147,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1688em;
     color: #ffff;
+    z-index: 5;
 
     @media (max-width: 48rem) {
       font-weight: 400;
@@ -156,7 +161,7 @@
 
     @media (max-width: 450px) {
       display: inherit;
-      width: 83.5%;
+      width: 100%;
       font-weight: normal;
       padding: 0.5em 0;
 
@@ -177,14 +182,10 @@
     }
   }
 
-  &__a {
-    @include flexible(flex, row, nowrap, flex-start, center);
-    gap: 0.75em;
-  }
-
   &__span {
     font-weight: bold;
     letter-spacing: 0.1688em;
+    margin: 0 0.75em 0 0;
 
     @media (max-width: 48rem) {
       display: none;
@@ -215,15 +216,18 @@
       right: 5.5%;
       @include flexible(flex, column, nowrap, space-between, center);
       gap: 0.375em;
+      z-index: 5;
     }
   }
 }
 
 @media (max-width: 450px) {
-
   .active.header__nav {
+    width: 70%;
     opacity: 1;
-    transition: all .5s ease;
+    pointer-events: auto;
+    z-index: 1;
+    transition: all 0.5s ease;
 
     body {
       overflow: hidden;
