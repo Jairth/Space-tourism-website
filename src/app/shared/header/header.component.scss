@@ -11,6 +11,10 @@
     top: 0;
   }
 
+  @media (max-width: 360px) and (max-height: 774px) {
+    padding: 2.3em 0;
+  }
+
   &__wrapper {
     @include flexible(flex, row, nowrap, space-between, center);
   }
@@ -109,7 +113,7 @@
     }
 
     @media (max-width: 28.125rem) {
-      height: 189.8vh;
+      height: 189.9vh;
       overflow: hidden;
       width: 0;
       right: 0;
@@ -160,14 +164,18 @@
       content: "";
       bottom: 0;
       left: 0;
-      width: 0;
+      width: 100%;
+      transform-origin: right;
+      transform: scaleX(0);
       height: 0.25rem;
       background-color: #ffff;
-      transition: width 0.5s ease;
+      transition: transform 0.4s ease;
     }
 
-    &:hover::after {
-      width: 100%;
+    &:hover::after,
+    &:focus::after {
+      transform-origin: left;
+      transform: scaleX(1);
     }
 
     @media (max-width: 768px) {

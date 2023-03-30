@@ -1,0 +1,19 @@
+<div class="destination__description">
+  <div class="destination__img">
+    <img [src]="destinations[1].images" alt="Moons" loading="lazy">
+  </div>
+  <div class="destination__texts">
+    <h2 class="destination__title">{{ destinations[1].name}}</h2>
+    <p class="destination__text">{{ destinations[1].description}}</p>
+    <div class="destination__footer">
+      <div class="destination__column1">
+        <span>AVG. DISTANCE</span>
+        <h3>{{ destinations[1].distance}}</h3>
+      </div>
+      <div class="destination__column2">
+        <span>Est. travel time</span>
+        <h3>{{ destinations[1].travel}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

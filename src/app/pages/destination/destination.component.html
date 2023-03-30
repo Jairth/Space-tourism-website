@@ -1,3 +1,18 @@
-<section class="main__wrapper">
-  <h1>Hola Destination</h1>
+<section class="destination">
+  <div class="destination__wrapper wrapper">
+    <h2 class="destination__subtitle"><span>01</span>Pick your destination</h2>
+    <div class="destination__planets">
+      <nav class="destination__nav">
+        <ul class="destination__ul">
+          <li class="destination__li" tabindex="0" [routerLink]="['moon']">MOON</li>
+          <li class="destination__li" tabindex="0" [routerLink]="['mars']">MARS</li>
+          <li class="destination__li" tabindex="0" [routerLink]="['europa']">EUROPA</li>
+          <li class="destination__li" tabindex="0" [routerLink]="['titan']">TITAN</li>
+        </ul>
+      </nav>
+      <div class="destination__description">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </section>
