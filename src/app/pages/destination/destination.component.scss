@@ -86,15 +86,6 @@
     }
   }
 
-  &__img {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-
   &__description {
     @include flexible(flex, row, nowrap, space-between, flex-end);
     gap: 3.15em;
@@ -166,60 +157,6 @@
 
     @media (max-width: 450px) {
       font-size: 0.875em;
-    }
-  }
-
-  &__texts {
-    @include flexible(flex, column, nowrap, center, flex-start);
-    width: 46%;
-  }
-
-  &__title {
-    font-family: "Bellefair";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 6.25em;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-
-  &__text {
-    font-family: "Barlow";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.125em;
-    line-height: 2rem;
-    color: #d0d6f9;
-  }
-
-  &__footer {
-    width: 100%;
-    @include flexible(flex, row, nowrap, flex-start, center);
-    padding: 1.875em 0 0 0;
-    border-top: 1px solid hsla(231, 15%, 26%, 1);
-    gap: 3.75em;
-  }
-
-  &__column1,
-  &__column2 {
-    @include flexible(flex, column, nowrap, center, flex-start);
-    gap: 1em;
-    span {
-      font-family: "Barlow Condensed";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 0.875em;
-      letter-spacing: 0.1477rem;
-      text-transform: uppercase;
-      color: #d0d6f9;
-    }
-    h3 {
-      font-family: "Bellefair";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1.75em;
-      text-transform: uppercase;
-      color: #ffffff;
     }
   }
 }
