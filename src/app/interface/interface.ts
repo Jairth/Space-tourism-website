@@ -29,3 +29,7 @@ export interface Images {
   portrait:  string;
   landscape: string;
 }
+
+export interface Fondos {
+  [key: string]: string;
+}

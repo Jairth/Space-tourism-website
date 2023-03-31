@@ -3,18 +3,13 @@
 .destination {
   position: absolute;
   top: 0;
-  background-image: url("../../../assets/shared/destination/background-destination-desktop.jpg");
+  // background-image: url("../../../assets/shared/destination/background-destination-desktop.jpg");
   background-size: cover;
   height: 100%;
   width: 100%;
   @include flexible(flex, row, nowrap, center, center);
 
-  @media (max-width: 768px) {
-    background-image: url("../../../assets/shared/destination/background-destination-tablet.jpg");
-  }
-  @media (max-width: 450px) {
-    background-image: url("../../../assets/shared/destination/background-destination-mobile.jpg");
-  }
+
 
   &__wrapper {
     @include flexible(flex, column, nowrap, center, flex-start);
