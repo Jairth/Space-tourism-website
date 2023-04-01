@@ -5,9 +5,7 @@ import { DestinationComponent } from './destination/destination.component';
 import { CrewComponent } from './crew/crew.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { DataService } from '../services/data.service';
-import { PagesRouteRoutes } from './pages-route.routing';
-
-
+import { PageRoutingModule } from './pageRouting.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +16,7 @@ import { PagesRouteRoutes } from './pages-route.routing';
   ],
   imports: [
     CommonModule,
-    PagesRouteRoutes
+    PageRoutingModule
   ],
   providers: [
     DataService
