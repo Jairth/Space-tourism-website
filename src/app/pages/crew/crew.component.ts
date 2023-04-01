@@ -1,23 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 
-type Fondos = {
-  [key: string]: string;
-}
-
 @Component({
   selector: 'app-crew',
   templateUrl: './crew.component.html',
-  styleUrls: ['./crew.component.scss']
+  styleUrls: ['./crew.component.scss'],
 })
 export class CrewComponent implements OnInit {
-
   seccionActual: string = 'Crew';
 
-  constructor(private dataService:DataService){}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.actualizarFondo(this.seccionActual)
+    this.dataService.actualizarFondo(this.seccionActual);
   }
-
 }

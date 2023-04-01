@@ -8,6 +8,10 @@ import { MoonComponent } from './destination/moon/moon.component';
 import { TitanComponent } from './destination/titan/titan.component';
 import { HomeComponent } from './home/home.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { DouglasComponent } from './crew/douglas/douglas.component';
+import { MarkComponent } from './crew/mark/mark.component';
+import { VictorComponent } from './crew/victor/victor.component';
+import { AnsariComponent } from './crew/ansari/ansari.component';
 
 const routes: Routes = [
   {
@@ -32,6 +36,13 @@ const routes: Routes = [
       {
         path: 'crew',
         component: CrewComponent,
+        children: [
+          { path: 'douglas', component: DouglasComponent },
+          { path: 'mark', component: MarkComponent },
+          { path: 'victor', component: VictorComponent },
+          { path: 'ansari', component: AnsariComponent },
+          { path: '**', redirectTo: 'douglas', pathMatch: 'full' },
+        ]
       },
       {
         path: 'technology',

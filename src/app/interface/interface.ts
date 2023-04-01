@@ -33,3 +33,11 @@ export interface Images {
 export interface Fondos {
   [key: string]: string;
 }
+
+
+export interface Crew {
+  name:string;
+  images:string;
+  bio:string;
+  role:string;
+}

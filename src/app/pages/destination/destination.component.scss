@@ -1,15 +1,10 @@
 @import "_mixins.scss";
 
 .destination {
-  position: absolute;
-  top: 0;
-  // background-image: url("../../../assets/shared/destination/background-destination-desktop.jpg");
   background-size: cover;
   height: 100%;
   width: 100%;
   @include flexible(flex, row, nowrap, center, center);
-
-
 
   &__wrapper {
     @include flexible(flex, column, nowrap, center, flex-start);
@@ -19,28 +14,13 @@
     @media (max-width: 768px) {
       position: relative;
       gap: 20em;
-      margin: 5em 0 0 0;
-    }
-
-    @media (max-width: 1440px) and (max-height: 706px) {
-      gap: 0.5em;
-    }
-
-    @media (max-width: 768px) and (max-height: 933px) {
-      gap: 10em;
-    }
-
-    @media (max-width: 600px) and (max-height: 737px) {
-      gap: 5em;
+      margin: 2em 0 0 0;
     }
 
     @media (max-width: 450px) {
       align-items: center;
-      margin: 3em 0 0 0;
-    }
-
-    @media (max-width: 395px) and (max-height: 780px) {
-      gap: 6em;
+      gap: 14em;
+      margin: 1em 0 0 0;
     }
   }
 
@@ -94,20 +74,20 @@
     @include flexible(flex, row, nowrap, flex-start, center);
     margin: 0 16.5% 0.5em 0;
 
-    @media (max-width: 1350px) {
-      margin: 0 14.5% 0.5em 0;
-    }
+    // @media (max-width: 1350px) {
+    //   margin: 0 14.5% 0.5em 0;
+    // }
 
-    @media (max-width: 1024px) {
-      margin: 0 9.5% 0.5em 0;
-    }
+    // @media (max-width: 1024px) {
+    //   margin: 0 9.5% 0.5em 0;
+    // }
 
-    @media (max-width: 950px) {
-      margin: 0 5% 0.5em 0;
-    }
+    // @media (max-width: 950px) {
+    //   margin: 0 5% 0.5em 0;
+    // }
 
     @media (max-width: 768px) {
-      margin: 20% 0 1.2em 0;
+      margin: 8% 0 1.2em 0;
     }
   }
 

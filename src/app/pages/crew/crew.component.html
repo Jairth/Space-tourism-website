@@ -1,3 +1,16 @@
-<section class="main__wrapper">
-  <h1>Hola Crew</h1>
+<section class="crew">
+  <div class="crew__wrapper wrapper">
+    <h2 class="crew__subtitle"><span>02</span>Meet Your Crew</h2>
+    <div class="crew__info">
+      <router-outlet></router-outlet>
+    </div>
+    <nav class="crew__nav">
+      <ul class="crew__ul">
+        <li class="crew__li" tabindex="0" [routerLink]="['douglas']"></li>
+        <li class=" crew__li" tabindex="0" [routerLink]="['mark']"></li>
+        <li class="crew__li" tabindex="0" [routerLink]="['victor']"></li>
+        <li class="crew__li" tabindex="0" [routerLink]="['ansari']"></li>
+      </ul>
+    </nav>
+  </div>
 </section>

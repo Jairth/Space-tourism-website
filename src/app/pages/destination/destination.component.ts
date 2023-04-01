@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Destination } from 'src/app/interface/interface';
 import { DataService } from 'src/app/services/data.service';
 
@@ -19,7 +18,7 @@ export class DestinationComponent implements OnInit{
   public destinations:Destination[] = []
   seccionActual: string = 'Destination';
 
-  constructor(private dataService: DataService,private router:Router) {}
+  constructor(private dataService: DataService ) {}
 
   ngOnInit(): void {
     this.destinations = this.dataService.destinations
