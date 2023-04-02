@@ -5,7 +5,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-ansari',
   templateUrl: './ansari.component.html',
-  styleUrls: ['./ansari.component.css']
+  styleUrls: ['./ansari.component.scss']
 })
 export class AnsariComponent implements OnInit {
 

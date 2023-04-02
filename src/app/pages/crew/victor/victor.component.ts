@@ -5,7 +5,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-victor',
   templateUrl: './victor.component.html',
-  styleUrls: ['./victor.component.css']
+  styleUrls: ['./victor.component.scss']
 })
 export class VictorComponent implements OnInit {
 

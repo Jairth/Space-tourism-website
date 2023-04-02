@@ -5,7 +5,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-douglas',
   templateUrl: './douglas.component.html',
-  styleUrls: ['./douglas.component.css']
+  styleUrls: ['./douglas.component.scss']
 })
 
 export class DouglasComponent implements OnInit{

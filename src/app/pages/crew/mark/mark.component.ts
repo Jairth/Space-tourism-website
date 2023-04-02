@@ -5,7 +5,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-mark',
   templateUrl: './mark.component.html',
-  styleUrls: ['./mark.component.css']
+  styleUrls: ['./mark.component.scss']
 })
 export class MarkComponent implements OnInit {
 

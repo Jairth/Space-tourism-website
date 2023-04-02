@@ -1,20 +1,46 @@
 @import "_reset.scss";
 @import "_mixins.scss";
 
-@import url(https://fonts.googleapis.com/css?family=Bellefair:regular);
-@import url(https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Barlow:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@font-face {
+  font-family: 'Bellefair';
+  src: url('./assets/fonts/Bellefair-Regular.woff2') format('woff2'),
+      url('./assets/fonts/Bellefair-Regular.woff') format('woff'),
+      url('./assets/fonts/Bellefair-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('./assets/fonts/BarlowCondensed-Regular.woff2') format('woff2'),
+      url('./assets/fonts/BarlowCondensed-Regular.woff') format('woff'),
+      url('./assets/fonts/BarlowCondensed-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./assets/fonts/Barlow-Regular.woff2') format('woff2'),
+      url('./assets/fonts/Barlow-Regular.woff') format('woff'),
+      url('./assets/fonts/Barlow-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   overflow-x: hidden;
 }
 
 body.fondoInicio {
-  background-image: url('./assets/shared/home/background-home-desktop.jpg');
+  background-image: url("./assets/shared/home/background-home-desktop.jpg");
   background-size: cover;
   background-position: center center;
   animation: fadeIn;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 
   @media (max-width: 768px) {
     background-image: url("./assets/shared/home/background-home-tablet.jpg");
@@ -26,11 +52,11 @@ body.fondoInicio {
 }
 
 body.fondoDestination {
-  background-image: url('./assets/shared/destination/background-destination-desktop.jpg');
+  background-image: url("./assets/shared/destination/background-destination-desktop.jpg");
   background-size: cover;
   background-position: center center;
   animation: fadeIn;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 
   @media (max-width: 768px) {
     background-image: url("./assets/shared/destination/background-destination-tablet.jpg");
@@ -41,11 +67,11 @@ body.fondoDestination {
 }
 
 body.fondoCrew {
-  background-image: url('./assets/shared/crew/background-crew-desktop.jpg');
+  background-image: url("./assets/shared/crew/background-crew-desktop.jpg");
   background-size: cover;
   background-position: center center;
   animation: fadeIn;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 
   @media (max-width: 768px) {
     background-image: url("./assets/shared/crew/background-crew-tablet.jpg");
@@ -56,11 +82,11 @@ body.fondoCrew {
 }
 
 body.fondoTech {
-  background-image: url('./assets/shared/technology/background-technology-desktop.jpg');
+  background-image: url("./assets/shared/technology/background-technology-desktop.jpg");
   background-size: cover;
   background-position: center center;
   animation: fadeIn;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 
   @media (max-width: 768px) {
     background-image: url("./assets/shared/technology/background-technology-tablet.jpg");
@@ -308,6 +334,7 @@ body.fondoTech {
   left: 55%;
 
   @media (max-width: 768px) {
+    width: 43%;
     left: 50%;
     transform: translateX(-43.5%);
   }
@@ -316,10 +343,15 @@ body.fondoTech {
     width: 40%;
   }
 
+  @media screen and (max-width:1440px) and (max-height:773px){
+    width: 26%;
+  }
+
   @media (max-width: 450px) {
     top: 9.8%;
     z-index: -1;
   }
+
 }
 
 .crew__img {
@@ -329,3 +361,49 @@ body.fondoTech {
     min-width: 177.12px;
   }
 }
+
+@media (max-width: 768px) {
+  .mark-img {
+    width: 38%;
+  }
+
+  .victor-img {
+    width: 47.5%;
+  }
+
+  .ansari-img {
+    width: 53%;
+  }
+}
+
+@media (max-width:450px) {
+  .mark-img {
+    top: 6.5%;
+    width: 38%;
+    left: 45%;
+  }
+
+  .victor-img {
+    top: 7%;
+    min-width: 13.75rem;
+  }
+
+  .ansari-img {
+    top: 11.7%;
+    min-width: 13.75rem;
+  }
+}
+
+// @media screen and (max-width:400px) and (max-height:700px) {
+//   .mark-img {
+//     top: 5.3%;
+//   }
+
+//   .victor-img {
+//     top: 7.5%;
+//   }
+
+//   .ansari-img {
+//     top: 10.3%;
+//   }
+// }

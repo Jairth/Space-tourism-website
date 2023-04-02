@@ -17,10 +17,9 @@
       gap: 8em;
     }
 
-    // @media (max-height: 667px) {
-    //   margin: 15% 0 0 0;
-    //   gap: 2em;
-    // }
+    @media (max-height: 700px) {
+      margin: 10em auto 0 auto;
+    }
   }
 
   &__space {

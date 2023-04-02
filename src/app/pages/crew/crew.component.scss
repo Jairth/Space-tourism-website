@@ -20,11 +20,18 @@
       gap: 2.5em;
     }
 
+    @media (max-height: 700px) {
+      margin: 3em 0 0 0;
+      padding: 0 0 1em 0;
+      gap: 2em;
+    }
+
     @media (max-width: 450px) {
       position: relative;
       align-items: center;
       margin: 1em 0 0 0;
     }
+
   }
 
   &__subtitle {
@@ -49,6 +56,10 @@
 
     @media (max-width: 450px) {
       font-size: 1em;
+
+      span {
+        margin: 0 1em 0 0;
+      }
     }
   }
 
@@ -142,8 +153,7 @@
     }
 
     @media (max-width: 450px) {
-      top: 9.8%;
-      z-index: -1;
+      top: 8.8%;
     }
   }
 
