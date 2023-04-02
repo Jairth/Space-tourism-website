@@ -41,3 +41,9 @@ export interface Crew {
   bio:string;
   role:string;
 }
+
+export interface Tech {
+  name:string;
+  images:Images;
+  description:string;
+}

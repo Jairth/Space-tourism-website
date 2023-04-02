@@ -1,0 +1,13 @@
+<div class="tech__information">
+  <div class="tech__texts">
+    <h3 class="tech__term">The Terminology...</h3>
+    <h2 class="tech__tittle">{{ tech[1].name }}</h2>
+    <p class="tech__text">{{ tech[1].description }}</p>
+  </div>
+  <div class="tech__image">
+    <picture>
+      <source media="(max-width: 768px)" [srcset]="tech[1].images.landscape" type="image/jpg">
+      <img [src]="tech[1].images.portrait" alt="Photo" class="tech__img">
+    </picture>
+  </div>
+</div>

@@ -12,6 +12,9 @@ import { DouglasComponent } from './crew/douglas/douglas.component';
 import { MarkComponent } from './crew/mark/mark.component';
 import { VictorComponent } from './crew/victor/victor.component';
 import { AnsariComponent } from './crew/ansari/ansari.component';
+import { VehicleComponent } from './technology/vehicle/vehicle.component';
+import { SpaceportComponent } from './technology/spaceport/spaceport.component';
+import { CapsuleComponent } from './technology/capsule/capsule.component';
 
 const routes: Routes = [
   {
@@ -42,11 +45,17 @@ const routes: Routes = [
           { path: 'victor', component: VictorComponent },
           { path: 'ansari', component: AnsariComponent },
           { path: '**', redirectTo: 'douglas', pathMatch: 'full' },
-        ]
+        ],
       },
       {
         path: 'technology',
         component: TechnologyComponent,
+        children: [
+          { path: 'vehicle', component: VehicleComponent },
+          { path: 'spaceport', component: SpaceportComponent },
+          { path: 'capsule', component: CapsuleComponent },
+          { path: '**', redirectTo: 'vehicle', pathMatch: 'full' },
+        ],
       },
       {
         path: '**',
@@ -58,6 +67,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class PageRoutingModule {}

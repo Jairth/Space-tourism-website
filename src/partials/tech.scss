@@ -1,0 +1,100 @@
+.tech__information {
+  @include flexible(flex, row, nowrap, center, center);
+}
+
+.tech__texts {
+  @include flexible(flex, column, nowrap, center, flex-start);
+  gap: 1em;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    padding: 0 0 1em 0;
+  }
+}
+.tech__term {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1688rem;
+  color: hsl(231, 77%, 90%);
+
+  @media (max-width: 450px) {
+    font-size: 0.875em;
+  }
+}
+.tech__tittle {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+
+
+
+  @media (max-width: 1265px) {
+    font-size: 3em;
+  }
+
+  @media (max-width: 1070px) {
+    font-size: 2.5em;
+  }
+
+  @media (max-width: 950px) {
+    font-size: 2.3em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
+  @media (max-width: 450px) {
+    font-size: 1.5em;
+  }
+}
+.tech__text {
+  width: 46.5%;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 2rem;
+  color: hsl(231, 77%, 90%);
+
+  @media (max-width: 950px) {
+    font-size: 1em;
+  }
+
+  @media (max-width: 768px) {
+    width: 65%;
+    text-align: center;
+    line-height: 1.75rem;
+  }
+  @media (max-width: 450px) {
+    width: 91%;
+    font-size: 1em;
+    line-height: 1.5625rem;
+  }
+}
+.tech__image {
+  background-color: lightcoral;
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 1350px) {
+    width: 35%;
+  }
+  @media (max-height: 700px) {
+    width: 25%;
+  }
+
+  @media (max-width: 768px) {
+    width: 115%;
+    right: -8%;
+    top: 7%;
+  }
+}
+.tech__img {
+  width: 100%;
+}

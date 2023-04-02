@@ -16,7 +16,6 @@ export class DouglasComponent implements OnInit{
 
   ngOnInit(): void {
     this.crew = this.dataService.crew
-    console.log(this.crew)
   }
 
 }

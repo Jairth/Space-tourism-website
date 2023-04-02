@@ -4,6 +4,7 @@
   background-size: cover;
   height: 100%;
   width: 100%;
+  animation: fade-in .5s ease;
   @include flexible(flex, row, nowrap, center, center);
 
   &__wrapper {
@@ -20,7 +21,7 @@
     @media (max-height: 700px) {
       margin: 3em 0 0 0;
       padding: 0 0 1em 0;
-      gap: 2em;
+      gap: 1em;
     }
 
     @media (max-width: 450px) {

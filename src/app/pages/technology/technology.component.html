@@ -1,3 +1,15 @@
-<section class="main__wrapper">
-  <h1>Hola Technology</h1>
+<section class="tech">
+  <div class="tech__wrapper wrapper">
+    <h2 class="tech__subtitle"><span>03</span>Space Launch 101</h2>
+    <div class="tech__vehicles">
+      <nav class="tech__nav">
+        <ul class="tech__ul">
+          <li class="tech__li" tabindex="0" [routerLink]="['vehicle']">1</li>
+          <li class="tech__li" tabindex="0" [routerLink]="['spaceport']">2</li>
+          <li class="tech__li" tabindex="0" [routerLink]="['capsule']">3</li>
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </section>

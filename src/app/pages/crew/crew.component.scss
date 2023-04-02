@@ -4,6 +4,7 @@
   height: 100%;
   width: 100%;
   @include flexible(flex, row, nowrap, center, center);
+  animation: fade-in .8s ease;
 
   &__wrapper {
     @include flexible(flex, column, nowrap, flex-start, flex-start);
@@ -31,7 +32,6 @@
       align-items: center;
       margin: 1em 0 0 0;
     }
-
   }
 
   &__subtitle {
