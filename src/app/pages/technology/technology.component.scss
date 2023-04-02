@@ -1,9 +1,9 @@
 @import "_mixins.scss";
 
 .tech {
-  background-size: cover;
   height: 100%;
   width: 100%;
+  animation: fade-in .8s ease;
   @include flexible(flex, row, nowrap, center, center);
 
   &__wrapper {

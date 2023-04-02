@@ -1,5 +1,6 @@
 .tech__information {
   @include flexible(flex, row, nowrap, center, center);
+  animation: fade-in .8s ease;
 }
 
 .tech__texts {
