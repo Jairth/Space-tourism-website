@@ -193,10 +193,15 @@
     border-radius: 50%;
     background: #ffffff;
     opacity: 0.17;
+    cursor: pointer;
     z-index: 4;
     transition: all 0.3s ease;
 
     &:hover, &:focus {
+      opacity: 0.5;
+    }
+
+    &.active {
       opacity: 1;
     }
 

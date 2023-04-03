@@ -4,7 +4,7 @@
   background-size: cover;
   height: 100%;
   width: 100%;
-  animation: fade-in .5s ease;
+  animation: fade-in 0.5s ease;
   @include flexible(flex, row, nowrap, center, center);
 
   &__wrapper {
@@ -115,7 +115,7 @@
       height: 3px;
       transform: scaleX(0);
       transform-origin: right;
-      background-color: #ffff;
+      background-color: hsla(0, 0%, 100%,0.5);
       transition: transform 0.4s ease;
     }
 
@@ -123,6 +123,14 @@
     &:focus::before {
       transform: scaleX(1);
       transform-origin: left;
+    }
+
+    &.active {
+      &::before {
+        background-color: hsl(0, 0%, 100%);
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
 
     @media (max-width: 450px) {
