@@ -6,6 +6,7 @@
   position: relative;
   @include flexible(flex, row, nowrap, flex-end, center);
   padding: 2.5em 0;
+  animation: fade-in 2s ease;
 
   @media (max-width: 768px) {
     top: 0;
@@ -263,7 +264,7 @@
     transition: all 0.5s ease;
 
     body {
-      overflow: hidden;
+      overflow: hidden !important;
     }
   }
 

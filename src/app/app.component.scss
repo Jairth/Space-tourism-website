@@ -1,1 +1,13 @@
+.spinner {
+  margin: 0 0 7em 0;
+}
 
+.spinner__img {
+  animation: spinner .65s ease infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
