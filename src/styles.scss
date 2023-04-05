@@ -37,9 +37,9 @@
 body {
   overflow-x: hidden;
 
-  @media (max-width:450px) {
-    overflow: hidden;
-  }
+  // @media (max-width:450px) {
+  //   overflow: hidden;
+  // }
 }
 
 body.fondoInicio {
